@@ -17,7 +17,6 @@ import {
   MapPin,
   Calendar,
   Lightbulb,
-  Handshake,
   Zap,
   Rocket,
   Building
@@ -112,7 +111,7 @@ export default function AboutPage() {
       description: 'We prioritize the security of transactions and data privacy for all users.'
     },
     {
-      icon: <Handshake className="w-6 h-6" />,
+      icon: <Users className="w-6 h-6" />,
       title: 'Merchant Success',
       description: 'Our success is measured by the success of merchants on our platform.'
     },
