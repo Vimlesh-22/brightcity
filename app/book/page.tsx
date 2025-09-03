@@ -30,7 +30,7 @@ export default function BookingPage({ searchParams }: BookingPageProps) {
 
   const service = useMemo(() => {
     if (!services || !selectedService) return null
-    return services.find(s => s.id === selectedService)
+    return services.find(s => String(s.id) === selectedService) || null
   }, [services, selectedService])
 
   const availableTimes = [

@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
+import { useRouter } from 'next/navigation'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
@@ -44,6 +45,7 @@ interface FAQ {
 }
 
 export default function ContactPage() {
+  const router = useRouter()
   const [formData, setFormData] = useState<ContactForm>({
     name: '',
     email: '',
