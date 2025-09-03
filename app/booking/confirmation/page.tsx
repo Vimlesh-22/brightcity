@@ -3,8 +3,10 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { CheckCircle, Calendar, Clock, MapPin, Phone, Mail, Download, Share2, Home, User } from 'lucide-react'
+import { useRouter } from 'next/navigation'
 
 export default function BookingConfirmationPage() {
+  const router = useRouter()
   // Mock booking data - in real app this would come from URL params or state
   const bookingData = {
     id: 'BK' + Math.random().toString(36).substr(2, 9).toUpperCase(),
