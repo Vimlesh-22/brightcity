@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
-import { Textarea } from '@/components/ui/textarea'
+// Removed custom Textarea (encoding issue). Using native <textarea> inline.
 import { Badge } from '@/components/ui/badge'
 import { Label } from '@/components/ui/label'
 import { 
@@ -381,13 +381,13 @@ export default function ContactPage() {
 
                   <div className="space-y-2">
                     <Label htmlFor="message">Message *</Label>
-                    <Textarea
+                    <textarea
                       id="message"
                       placeholder="Please provide details about your inquiry..."
                       rows={6}
                       value={formData.message}
                       onChange={(e) => handleInputChange('message', e.target.value)}
-                      className={errors.message ? 'border-red-500' : ''}
+                      className={`flex min-h-[120px] w-full rounded-md border bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 ${errors.message ? 'border-red-500' : 'border-input'}`}
                     />
                     {errors.message && <p className="text-sm text-red-500">{errors.message}</p>}
                   </div>
