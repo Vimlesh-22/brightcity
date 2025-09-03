@@ -8,12 +8,24 @@ import type { Service } from '@/types'
 export default function ServiceDetailPage() {
   const params = useParams<{ id: string }>()
   const id = params?.id
-  const { data: service, isLoading, isError, refetch } = useServices({ id })
+  const { data: services, isLoading, isError, refetch } = useServices({ id })
   const { data: related } = useServices({ limit: 5 })
-  const { data: reviews } = useServices({ limit: 6 })
   const router = useRouter()
   const createBooking = useCreateBooking()
   const [creating, setCreating] = useState(false)
+
+  // Get the first (and only) service from the array
+  const service = services?.[0]
+
+  // Mock reviews data
+  const reviews = [
+    { id: '1', rating: 5, comment: 'Excellent service! Very professional and thorough.' },
+    { id: '2', rating: 4, comment: 'Good quality work, would recommend.' },
+    { id: '3', rating: 5, comment: 'Amazing results, exceeded my expectations.' },
+    { id: '4', rating: 4, comment: 'Reliable and punctual service.' },
+    { id: '5', rating: 5, comment: 'Great value for money, highly satisfied.' },
+    { id: '6', rating: 4, comment: 'Professional team, clean work.' }
+  ]
 
   const handleQuickBook = async () => {
     if (!service) return

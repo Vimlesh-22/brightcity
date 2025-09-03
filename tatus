@@ -1,0 +1,5 @@
+[33m6a400877[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m fix: add missing useRouter to booking confirmation
+[33mdafdcf2f[m fix: remove duplicate /register route file
+[33mc4f9d544[m chore: remove duplicate root register page
+[33me570c3a8[m Normalize service id handling to string to fix TS errors
+[33mbeeba8b6[m Fix contact page missing router and normalize service id comparison

@@ -25,7 +25,7 @@ export default function CategoryPage() {
           <a key={s.id} href={`/services/${s.id}`} className="group rounded-xl border p-4 hover:shadow transition flex flex-col gap-2">
             <div className="font-medium group-hover:text-primary line-clamp-1">{s.name}</div>
             <div className="text-xs text-muted-foreground flex gap-2">
-              { (s as any).pricing?.basePrice != null && <span>{(s as any).pricing.basePrice}</span>}
+              {s.pricing?.basePrice != null && <span>₹{s.pricing.basePrice.toLocaleString()}</span>}
             </div>
             <span className="mt-auto text-primary text-sm font-medium">View</span>
           </a>

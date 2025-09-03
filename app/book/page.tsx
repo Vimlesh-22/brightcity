@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Badge } from '@/components/ui/badge'
 import { Calendar, Clock, MapPin, User, Phone, Mail, ArrowLeft } from 'lucide-react'
+import type { Service } from '@/types'
 
 interface BookingPageProps {
   searchParams: {
@@ -30,7 +31,7 @@ export default function BookingPage({ searchParams }: BookingPageProps) {
 
   const service = useMemo(() => {
     if (!services || !selectedService) return null
-    return services.find(s => String(s.id) === selectedService) || null
+    return services.find(s => s.id === selectedService) || null
   }, [services, selectedService])
 
   const availableTimes = [
@@ -122,20 +123,20 @@ export default function BookingPage({ searchParams }: BookingPageProps) {
                       {services?.map(s => (
                         <div
                           key={s.id}
-                          onClick={() => setSelectedService(String(s.id))}
+                          onClick={() => setSelectedService(s.id)}
                           className={`p-4 border rounded-lg cursor-pointer transition-all ${
-                            selectedService === String(s.id) 
+                            selectedService === s.id 
                               ? 'border-primary bg-primary/5' 
                               : 'border-border hover:border-primary/50'
                           }`}
                         >
                           <div className="flex items-center gap-3">
                             <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white font-bold">
-                              {(s as any).name?.[0] || '🔧'}
+                              {s.name?.[0] || '🔧'}
                             </div>
                             <div className="flex-1">
-                              <h3 className="font-semibold text-foreground">{(s as any).name}</h3>
-                              <p className="text-sm text-muted-foreground">₹{(s as any).pricing?.basePrice}</p>
+                              <h3 className="font-semibold text-foreground">{s.name}</h3>
+                              <p className="text-sm text-muted-foreground">₹{s.pricing?.basePrice?.toLocaleString()}</p>
                             </div>
                           </div>
                         </div>
@@ -241,7 +242,7 @@ export default function BookingPage({ searchParams }: BookingPageProps) {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
                       <div>
                         <span className="text-muted-foreground">Service:</span>
-                        <p className="font-medium text-foreground">{(service as any)?.name}</p>
+                        <p className="font-medium text-foreground">{service?.name}</p>
                       </div>
                       <div>
                         <span className="text-muted-foreground">Date:</span>
@@ -253,7 +254,7 @@ export default function BookingPage({ searchParams }: BookingPageProps) {
                       </div>
                       <div>
                         <span className="text-muted-foreground">Price:</span>
-                        <p className="font-medium text-foreground">₹{(service as any)?.pricing?.basePrice}</p>
+                        <p className="font-medium text-foreground">₹{service?.pricing?.basePrice?.toLocaleString()}</p>
                       </div>
                     </div>
                   </div>
@@ -326,27 +327,27 @@ export default function BookingPage({ searchParams }: BookingPageProps) {
                 <CardContent className="space-y-4">
                   <div className="flex items-center gap-3">
                     <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white font-bold">
-                      {(service as any).name?.[0] || '🔧'}
+                      {service.name?.[0] || '🔧'}
                     </div>
                     <div>
-                      <h3 className="font-semibold text-foreground">{(service as any).name}</h3>
-                      <p className="text-sm text-muted-foreground">{(service as any).description}</p>
+                      <h3 className="font-semibold text-foreground">{service.name}</h3>
+                      <p className="text-sm text-muted-foreground">{service.description}</p>
                     </div>
                   </div>
                   
                   <div className="space-y-2">
                     <div className="flex justify-between">
                       <span className="text-muted-foreground">Price:</span>
-                      <span className="font-semibold text-emerald-600">₹{(service as any).pricing?.basePrice}</span>
+                      <span className="font-semibold text-emerald-600">₹{service.pricing?.basePrice?.toLocaleString()}</span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-muted-foreground">Rating:</span>
-                      <span className="font-semibold text-orange-500">{(service as any).ratingAverage?.toFixed?.(1) || '—'} ★</span>
+                      <span className="font-semibold text-orange-500">{service.ratingAverage?.toFixed?.(1) || '—'} ★</span>
                     </div>
                   </div>
                   
                   <div className="flex flex-wrap gap-1">
-                    {(service as any).categories?.map((c: string) => (
+                    {service.categories?.map((c: string) => (
                       <Badge key={c} variant="secondary" className="text-xs bg-accent text-accent-foreground">
                         {c}
                       </Badge>
