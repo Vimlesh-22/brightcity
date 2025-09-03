@@ -16,7 +16,7 @@ interface BookingPageProps {
 
 export default function BookingPage({ searchParams }: BookingPageProps) {
   const [step, setStep] = useState(1)
-  const [selectedService, setSelectedService] = useState<string>(searchParams.serviceId || '')
+  const [selectedService, setSelectedService] = useState<string>(searchParams.serviceId ? String(searchParams.serviceId) : '')
   const [selectedDate, setSelectedDate] = useState('')
   const [selectedTime, setSelectedTime] = useState('')
   const [customerInfo, setCustomerInfo] = useState({
@@ -122,9 +122,9 @@ export default function BookingPage({ searchParams }: BookingPageProps) {
                       {services?.map(s => (
                         <div
                           key={s.id}
-                          onClick={() => setSelectedService(s.id)}
+                          onClick={() => setSelectedService(String(s.id))}
                           className={`p-4 border rounded-lg cursor-pointer transition-all ${
-                            selectedService === s.id 
+                            selectedService === String(s.id) 
                               ? 'border-primary bg-primary/5' 
                               : 'border-border hover:border-primary/50'
                           }`}
