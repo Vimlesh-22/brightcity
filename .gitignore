@@ -23,7 +23,7 @@ Thumbs.db
 *.key
 *.crt
 *.der
-package-lock.json
+
 pnpm-lock.yaml
 yarn.lock
 .clinerules/byterover-rules.md
