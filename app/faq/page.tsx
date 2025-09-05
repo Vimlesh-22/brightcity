@@ -343,7 +343,7 @@ export default function FAQPage() {
 
       <div className="max-w-7xl mx-auto px-4 py-16">
         {/* Quick Stats */}
-        <div className="grid md:grid-cols-4 gap-6 mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
           <Card>
             <CardContent className="p-6 text-center">
               <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
@@ -388,7 +388,7 @@ export default function FAQPage() {
         {/* Popular FAQs */}
         <section className="mb-12">
           <h2 className="text-2xl font-bold mb-6">Most Popular Questions</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             {popularFAQs.map((faq) => (
               <Card key={faq.id} className="group hover:shadow-lg transition-all cursor-pointer">
                 <CardContent className="p-6">
@@ -411,9 +411,9 @@ export default function FAQPage() {
           </div>
         </section>
 
-        <div className="grid lg:grid-cols-4 gap-8">
+        <div className="grid lg:grid-cols-1 xl:grid-cols-4 gap-8">
           {/* Categories Sidebar */}
-          <div className="lg:col-span-1">
+          <div className="xl:col-span-1">
             <Card>
               <CardHeader>
                 <CardTitle>Categories</CardTitle>
@@ -484,7 +484,7 @@ export default function FAQPage() {
           </div>
 
           {/* FAQ List */}
-          <div className="lg:col-span-3">
+          <div className="xl:col-span-3">
             <div className="flex items-center justify-between mb-6">
               <h2 className="text-2xl font-bold">
                 {selectedCategory === 'all' ? 'All Questions' : 

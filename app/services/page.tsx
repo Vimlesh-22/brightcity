@@ -199,9 +199,9 @@ export default function ServicesPage() {
       {/* Filters and Results */}
       <section className="py-8">
         <div className="container">
-          <div className="grid lg:grid-cols-4 gap-6">
+          <div className="grid lg:grid-cols-1 xl:grid-cols-4 gap-6">
             {/* Sidebar Filters */}
-            <div className="lg:col-span-1">
+            <div className="xl:col-span-1">
               <div className="bg-white rounded-lg shadow-md p-4 space-y-4">
                 <h3 className="text-lg font-semibold text-gray-900">Filters</h3>
                 
@@ -267,7 +267,7 @@ export default function ServicesPage() {
             </div>
 
             {/* Services Grid */}
-            <div className="lg:col-span-3">
+            <div className="xl:col-span-3">
                               <div className="flex items-center justify-between mb-4">
                 <h2 className="text-2xl font-bold text-gray-900">
                   {filteredServices.length} Services Found
@@ -279,7 +279,7 @@ export default function ServicesPage() {
               </div>
 
               {filteredServices.length > 0 ? (
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-4">
                   {filteredServices.map((service) => (
                     <ServiceCard key={service.id} service={service} />
                   ))}

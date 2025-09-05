@@ -31,7 +31,7 @@ export default function ServiceCard({ service }: { service: ServiceCardProps }) 
 
   return (
     <Card 
-      className="group hover:shadow-xl transition-all duration-300 cursor-pointer border border-gray-200 overflow-hidden transform hover:scale-105 hover:w-[calc(100%+20px)]"
+      className="group hover:shadow-xl transition-all duration-300 cursor-pointer border border-gray-200 overflow-hidden transform hover:scale-105"
       onClick={() => router.push(`/services/${service.id}`)}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}

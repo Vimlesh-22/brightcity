@@ -72,7 +72,7 @@ export default function SwipeablePromoBanner({
       <div className="container mx-auto px-4">
         <div className="relative overflow-hidden rounded-2xl shadow-2xl">
           {/* Banner Container */}
-          <div className="relative h-72 md:h-80">
+          <div className="relative h-auto md:h-80">
             {banners.map((banner, index) => (
               <div
                 key={banner.id}
@@ -93,23 +93,23 @@ export default function SwipeablePromoBanner({
                   </div>
                   
                   {/* Content */}
-                  <div className="relative h-full flex items-center">
+                  <div className="relative h-full flex items-center py-8 md:py-0">
                     <div className="container mx-auto px-8">
                       <div className="grid md:grid-cols-2 gap-8 items-center">
                         {/* Text Content */}
-                        <div className="text-center md:text-left space-y-4">
+                        <div className="text-center md:text-left space-y-4 z-10">
                           {banner.badge && (
                             <div className={`inline-block px-3 py-1 rounded-full text-sm font-medium ${banner.badgeColor}`}>
                               {banner.badge}
                             </div>
                           )}
-                          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+                          <h2 className="text-2xl md:text-4xl font-bold text-gray-900">
                             {banner.title}
                           </h2>
-                          <h3 className="text-xl md:text-2xl font-semibold text-gray-700">
+                          <h3 className="text-lg md:text-2xl font-semibold text-gray-700">
                             {banner.subtitle}
                           </h3>
-                          <p className="text-gray-600 text-lg">
+                          <p className="text-gray-600 text-base md:text-lg">
                             {banner.description}
                           </p>
                           <Button

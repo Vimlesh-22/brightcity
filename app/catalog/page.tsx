@@ -251,7 +251,7 @@ export default function ServiceCatalog() {
                          <h2 className="text-2xl font-bold text-gray-900 mb-2">{category.name}</h2>
                     <p className="text-gray-600">{category.description}</p>
                   </div>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
                     {category.services.map((service, index) => (
                       <div
                         key={index}
@@ -291,7 +291,7 @@ export default function ServiceCatalog() {
                   {serviceCatalog[selectedCategory as keyof typeof serviceCatalog]?.description}
                 </p>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
                 {serviceCatalog[selectedCategory as keyof typeof serviceCatalog]?.services.map((service, index) => (
                   <div
                     key={index}

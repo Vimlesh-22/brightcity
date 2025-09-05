@@ -236,7 +236,7 @@ export default function HomeContent() {
       <section className="py-8 bg-white">
         <div className="container">
           <h2 className="text-3xl font-bold mb-6 text-gray-900">Our Popular Services</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {popularServices.map((service) => (
               <ServiceCard key={service.id} service={service} />
             ))}

@@ -103,9 +103,9 @@ export default function BookingPage({ searchParams }: BookingPageProps) {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Main Content */}
-          <div className="md:col-span-2">
+          <div className="lg:col-span-2">
             {step === 1 && (
               <Card className="bg-card border border-border">
                 <CardHeader>
@@ -113,13 +113,13 @@ export default function BookingPage({ searchParams }: BookingPageProps) {
                 </CardHeader>
                 <CardContent className="space-y-4">
                   {isLoading ? (
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       {Array.from({length: 6}).map((_, i) => (
                         <div key={i} className="h-24 bg-muted animate-pulse rounded-lg" />
                       ))}
                     </div>
                   ) : (
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       {services?.map(s => (
                         <div
                           key={s.id}
@@ -189,7 +189,7 @@ export default function BookingPage({ searchParams }: BookingPageProps) {
                   <CardTitle className="text-foreground">Step 3: Customer Information</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-sm font-medium mb-2 text-foreground">Full Name</label>
                       <Input
@@ -209,7 +209,7 @@ export default function BookingPage({ searchParams }: BookingPageProps) {
                     </div>
                   </div>
                   
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-sm font-medium mb-2 text-foreground">Phone Number</label>
                       <Input
@@ -239,7 +239,7 @@ export default function BookingPage({ searchParams }: BookingPageProps) {
                 <CardContent className="space-y-6">
                   <div className="bg-muted/50 p-4 rounded-lg space-y-3">
                     <h3 className="font-semibold text-foreground">Booking Summary</h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
                       <div>
                         <span className="text-muted-foreground">Service:</span>
                         <p className="font-medium text-foreground">{service?.name}</p>
@@ -261,7 +261,7 @@ export default function BookingPage({ searchParams }: BookingPageProps) {
                   
                   <div className="bg-muted/50 p-4 rounded-lg space-y-3">
                     <h3 className="font-semibold text-foreground">Customer Details</h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
                       <div>
                         <span className="text-muted-foreground">Name:</span>
                         <p className="font-medium text-foreground">{customerInfo.name}</p>

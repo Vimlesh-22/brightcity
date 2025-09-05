@@ -130,9 +130,9 @@ export default function DashboardPage() {
       </header>
 
       <div className="container mx-auto px-4 py-8">
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-1 xl:grid-cols-4 gap-8">
           {/* Sidebar */}
-          <div className="lg:col-span-1">
+          <div className="xl:col-span-1">
             <Card className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
               <CardHeader>
                 <CardTitle className="text-lg">Profile</CardTitle>
@@ -174,9 +174,9 @@ export default function DashboardPage() {
           </div>
 
           {/* Main Content */}
-          <div className="lg:col-span-3">
+          <div className="xl:col-span-3">
             <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-6">
-              <TabsList className="grid w-full grid-cols-4">
+              <TabsList className="grid w-full grid-cols-2 sm:grid-cols-4">
                 <TabsTrigger value="overview">Overview</TabsTrigger>
                 <TabsTrigger value="bookings">Bookings</TabsTrigger>
                 <TabsTrigger value="favorites">Favorites</TabsTrigger>
@@ -185,7 +185,7 @@ export default function DashboardPage() {
 
               <TabsContent value="overview" className="space-y-6">
                 {/* Stats Cards */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                   <Card className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
                     <CardContent className="p-6">
                       <div className="flex items-center justify-between">
@@ -238,8 +238,8 @@ export default function DashboardPage() {
                   <CardContent>
                     <div className="space-y-4">
                       {recentBookings.map((booking) => (
-                        <div key={booking.id} className="flex items-center justify-between p-4 border border-gray-200 dark:border-gray-700 rounded-lg">
-                          <div className="flex items-center gap-4">
+                        <div key={booking.id} className="flex flex-col sm:flex-row items-start sm:items-center justify-between p-4 border border-gray-200 dark:border-gray-700 rounded-lg">
+                          <div className="flex items-center gap-4 mb-2 sm:mb-0">
                             <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
                               <Calendar className="w-5 h-5 text-blue-600" />
                             </div>
@@ -279,8 +279,8 @@ export default function DashboardPage() {
                   <CardContent>
                     <div className="space-y-4">
                       {recentBookings.map((booking) => (
-                        <div key={booking.id} className="flex items-center justify-between p-4 border border-gray-200 dark:border-gray-700 rounded-lg">
-                          <div className="flex items-center gap-4">
+                        <div key={booking.id} className="flex flex-col sm:flex-row items-start sm:items-center justify-between p-4 border border-gray-200 dark:border-gray-700 rounded-lg">
+                          <div className="flex items-center gap-4 mb-2 sm:mb-0">
                             <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
                               <Calendar className="w-5 h-5 text-blue-600" />
                             </div>
@@ -350,8 +350,8 @@ export default function DashboardPage() {
                   <CardContent>
                     <div className="space-y-4">
                       {recentBookings.map((booking) => (
-                        <div key={booking.id} className="flex items-center justify-between p-4 border border-gray-200 dark:border-gray-700 rounded-lg">
-                          <div className="flex items-center gap-4">
+                        <div key={booking.id} className="flex flex-col sm:flex-row items-start sm:items-center justify-between p-4 border border-gray-200 dark:border-gray-700 rounded-lg">
+                          <div className="flex items-center gap-4 mb-2 sm:mb-0">
                             <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
                               <CreditCard className="w-5 h-5 text-green-600" />
                             </div>

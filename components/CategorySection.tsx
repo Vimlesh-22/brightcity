@@ -31,7 +31,7 @@ export default function CategorySection({ title, categories }: { title: string, 
           <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full animate-pulse"></div>
         </div>
         
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2 md:gap-4">
           {categories.map((category, index) => (
             <Card 
               key={category.id}
@@ -41,7 +41,7 @@ export default function CategorySection({ title, categories }: { title: string, 
               onMouseEnter={() => setHoveredCard(category.id)}
               onMouseLeave={() => setHoveredCard(null)}
             >
-              <CardContent className="p-4 text-center space-y-4 relative">
+              <CardContent className="p-2 md:p-4 text-center space-y-2 md:space-y-4 relative">
                 {/* Background Glow Effect */}
                 <div className={`absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-lg transition-opacity duration-500 ${hoveredCard === category.id ? 'opacity-100' : 'opacity-0'}`}></div>
                 
@@ -65,7 +65,7 @@ export default function CategorySection({ title, categories }: { title: string, 
                 
                 {/* Content */}
                 <div className="space-y-3 relative z-10">
-                  <h3 className="font-semibold text-gray-800 text-sm line-clamp-2 group-hover:text-blue-600 transition-colors duration-300">
+                  <h3 className="font-semibold text-gray-800 text-xs md:text-sm line-clamp-2 group-hover:text-blue-600 transition-colors duration-300">
                     {category.name}
                   </h3>
                   

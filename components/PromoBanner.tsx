@@ -26,7 +26,7 @@ export default function PromoBanner({ promo }: { promo: PromoBannerProps }) {
 
   return (
     <section 
-      className={`relative overflow-hidden ${promo.backgroundColor || 'bg-gradient-to-r from-orange-100 to-yellow-100'} py-16`}
+      className={`relative overflow-hidden ${promo.backgroundColor || 'bg-gradient-to-r from-orange-100 to-yellow-100'} py-8 md:py-16`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -38,9 +38,9 @@ export default function PromoBanner({ promo }: { promo: PromoBannerProps }) {
       </div>
 
       <div className="container relative">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Left Content */}
-          <div className={`space-y-8 ${promo.textColor || 'text-gray-900'} animate-fade-in-left`}>
+          <div className={`space-y-6 md:space-y-8 ${promo.textColor || 'text-gray-900'} animate-fade-in-left text-center lg:text-left`}>
             {promo.badge && (
               <div className={`inline-flex items-center px-6 py-3 rounded-full text-sm font-bold ${promo.badgeColor || 'bg-orange-500 text-white'} shadow-lg animate-bounce`}>
                 <Sparkles className="w-4 h-4 mr-2 animate-spin" />
@@ -49,25 +49,25 @@ export default function PromoBanner({ promo }: { promo: PromoBannerProps }) {
             )}
             
             <div className="space-y-6">
-              <h2 className="text-5xl lg:text-6xl font-bold leading-tight animate-fade-in-up">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight animate-fade-in-up">
                 {promo.title}
               </h2>
               
               {promo.subtitle && (
-                <h3 className="text-3xl lg:text-4xl font-semibold text-orange-600 animate-fade-in-up delay-200">
+                <h3 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-orange-600 animate-fade-in-up delay-200">
                   {promo.subtitle}
                 </h3>
               )}
               
               {promo.description && (
-                <p className="text-xl text-gray-700 leading-relaxed animate-fade-in-up delay-300">
+                <p className="text-lg md:text-xl text-gray-700 leading-relaxed animate-fade-in-up delay-300">
                   {promo.description}
                 </p>
               )}
             </div>
 
             {/* Features */}
-            <div className="flex items-center gap-6 animate-fade-in-up delay-400">
+            <div className="flex items-center justify-center lg:justify-start gap-4 md:gap-6 animate-fade-in-up delay-400">
               <div className="flex items-center gap-2 bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
                 <Star className="w-5 h-5 fill-yellow-400 text-yellow-400" />
                 <span className="font-semibold">4.9★ Rating</span>
@@ -90,7 +90,7 @@ export default function PromoBanner({ promo }: { promo: PromoBannerProps }) {
 
           {/* Right Content - Image */}
           <div className="relative animate-fade-in-right">
-            <div className="relative w-full h-96 lg:h-[500px] rounded-3xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-700">
+            <div className="relative w-full h-64 md:h-96 lg:h-[500px] rounded-3xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-700">
               <Image
                 src={promo.image}
                 alt={promo.title}
@@ -125,7 +125,7 @@ export default function PromoBanner({ promo }: { promo: PromoBannerProps }) {
       </div>
 
       {/* Navigation Arrows */}
-      <div className="absolute left-6 top-1/2 transform -translate-y-1/2">
+      <div className="absolute left-2 md:left-6 top-1/2 transform -translate-y-1/2">
         <Button 
           variant="ghost" 
           size="lg"
@@ -135,7 +135,7 @@ export default function PromoBanner({ promo }: { promo: PromoBannerProps }) {
         </Button>
       </div>
       
-      <div className="absolute right-6 top-1/2 transform -translate-y-1/2">
+      <div className="absolute right-2 md:right-6 top-1/2 transform -translate-y-1/2">
         <Button 
           variant="ghost" 
           size="lg"
