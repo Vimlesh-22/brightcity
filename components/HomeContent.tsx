@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from 'react'
+import React, { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import Header from '@/components/Header'
 import CategorySection from '@/components/CategorySection'
@@ -217,7 +217,7 @@ export default function HomeContent() {
   ]
 
   return (
-    <main className="min-h-screen bg-gray-50">
+    <main className="min-h-screen bg-background">
       {/* Amazon-style Header */}
       <Header />
 
@@ -233,9 +233,9 @@ export default function HomeContent() {
       <CategorySection title="Our Services" categories={sportsCategories} />
 
       {/* Urban Company-style Popular Services */}
-      <section className="py-8 bg-white">
+      <section className="py-8 bg-card border-t border-b border-border">
         <div className="container">
-          <h2 className="text-3xl font-bold mb-6 text-gray-900">Our Popular Services</h2>
+          <h2 className="text-3xl font-bold mb-6 text-foreground">Our Popular Services</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {popularServices.map((service) => (
               <ServiceCard key={service.id} service={service} />
@@ -248,9 +248,9 @@ export default function HomeContent() {
       <PromoBanner promo={promoBanners[1]} />
 
       {/* Additional Service Categories */}
-      <section className="py-8 bg-gray-50">
+      <section className="py-8 bg-background">
         <div className="container">
-          <h2 className="text-3xl font-bold mb-6 text-gray-900">🛠 Handyman & Repair Services</h2>
+          <h2 className="text-3xl font-bold mb-6 text-foreground">🛠 Handyman & Repair Services</h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
             {[
               { name: '⚡ Electrician', image: '/Gallery/Electrical Installation.jpg', price: 'From ₹299' },
@@ -260,12 +260,12 @@ export default function HomeContent() {
               { name: '🔨 Appliance Repair', image: '/Gallery/AC Service.jpg', price: 'From ₹199' },
               { name: '🚨 Emergency Services', image: '/Gallery/Plumbing Repair 2.jpg', price: 'From ₹999' }
             ].map((service, index) => (
-              <div key={index} className="bg-white rounded-lg p-4 text-center hover:shadow-lg transition-shadow cursor-pointer">
-                <div className="relative w-full aspect-square rounded-lg overflow-hidden bg-gray-100 mb-3">
+              <div key={index} className="bg-card border border-border rounded-lg p-4 text-center hover:shadow-lg transition-shadow cursor-pointer">
+                <div className="relative w-full aspect-square rounded-lg overflow-hidden bg-muted mb-3">
                   <img src={service.image} alt={service.name} className="w-full h-full object-cover" />
                 </div>
-                <h3 className="font-medium text-gray-800 text-sm mb-1">{service.name}</h3>
-                <p className="text-gray-600 text-xs">{service.price}</p>
+                <h3 className="font-medium text-foreground text-sm mb-1">{service.name}</h3>
+                <p className="text-muted-foreground text-xs">{service.price}</p>
               </div>
             ))}
           </div>

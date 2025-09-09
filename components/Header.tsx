@@ -17,9 +17,9 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="bg-white shadow-md">
+    <header className="bg-background shadow-md border-b border-border">
       {/* Top bar */}
-      <div className="bg-blue-600 text-white text-sm py-2 px-4 md:px-8">
+      <div className="bg-primary text-primary-foreground text-sm py-2 px-4 md:px-8">
         <div className="container mx-auto flex justify-between items-center">
           <div className="hidden md:flex items-center gap-4">
             <span className="cursor-pointer hover:text-blue-200 transition-colors duration-300 hover:scale-105">Track Order</span>
@@ -27,9 +27,11 @@ const Header = () => {
             <span className="cursor-pointer hover:text-blue-200 transition-colors duration-300 hover:scale-105">Professional Login</span>
           </div>
           <div className="flex items-center gap-4">
-            <Link href="/login" className="hover:text-blue-200 transition-colors duration-300 hover:scale-105">Login</Link>
-            <span className="text-gray-400">|</span>
-            <Link href="/register" className="hover:text-blue-200 transition-colors duration-300 hover:scale-105">Register</Link>
+            <Link href="/theme" className="hover:opacity-80 transition-colors duration-300 hover:scale-105">Theme</Link>
+            <span className="text-primary-foreground/40">|</span>
+            <Link href="/login" className="hover:opacity-80 transition-colors duration-300 hover:scale-105">Login</Link>
+            <span className="text-primary-foreground/40">|</span>
+            <Link href="/register" className="hover:opacity-80 transition-colors duration-300 hover:scale-105">Register</Link>
           </div>
         </div>
       </div>
@@ -38,29 +40,29 @@ const Header = () => {
       <div className="py-4 px-4 md:px-8">
         <div className="container mx-auto flex justify-between items-center">
           <div className="flex items-center gap-8">
-            <Link href="/" className="text-3xl font-bold text-blue-600">
+            <Link href="/" className="text-3xl font-bold text-primary">
               BrightCity
             </Link>
           </div>
 
-          <div className="hidden md:flex flex-grow max-w-xl items-center border rounded-full overflow-hidden">
+          <div className="hidden md:flex flex-grow max-w-xl items-center border border-border rounded-full overflow-hidden bg-background">
             <input
               type="text"
               placeholder="Search for services..."
-              className="w-full px-4 py-2 focus:outline-none"
+              className="w-full px-4 py-2 focus:outline-none bg-transparent text-foreground"
             />
-            <button className="bg-blue-600 text-white p-2 hover:bg-blue-700 transition-colors">
+            <button className="bg-primary text-primary-foreground p-2 hover:bg-primary/90 transition-colors">
               <Search size={20} />
             </button>
           </div>
 
           <div className="flex items-center gap-4">
-            <div className="hidden md:flex items-center gap-2 cursor-pointer hover:text-blue-600 transition-colors">
+            <div className="hidden md:flex items-center gap-2 cursor-pointer hover:text-primary transition-colors">
               <ShoppingCart size={24} />
               <span className="font-medium">Cart</span>
             </div>
             <div className="md:hidden">
-              <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-gray-600 focus:outline-none">
+              <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-foreground focus:outline-none">
                 {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
               </button>
             </div>
@@ -70,22 +72,23 @@ const Header = () => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white pb-4 px-4">
+        <div className="md:hidden bg-card pb-4 px-4 border-t border-border">
           <div className="flex flex-col gap-4">
-            <div className="flex w-full items-center border rounded-full overflow-hidden">
+            <div className="flex w-full items-center border border-border rounded-full overflow-hidden bg-background">
               <input
                 type="text"
                 placeholder="Search for services..."
-                className="w-full px-4 py-2 focus:outline-none"
+                className="w-full px-4 py-2 focus:outline-none bg-transparent text-foreground"
               />
-              <button className="bg-blue-600 text-white p-2 hover:bg-blue-700 transition-colors">
+              <button className="bg-primary text-primary-foreground p-2 hover:bg-primary/90 transition-colors">
                 <Search size={20} />
               </button>
             </div>
-            <div className="flex items-center gap-2 cursor-pointer hover:text-blue-600 transition-colors">
+            <div className="flex items-center gap-2 cursor-pointer hover:text-primary transition-colors">
               <ShoppingCart size={24} />
               <span className="font-medium">Cart</span>
             </div>
+            <Link href="/theme" className="text-card-foreground hover:text-primary py-2 border-b border-border">Theme</Link>
             <nav className="flex flex-col gap-2">
               {categories.map((category) => (
                 <Link key={category.name} href={category.href} className="text-gray-700 hover:text-blue-600 py-2 border-b">
@@ -103,11 +106,11 @@ const Header = () => {
       )}
 
       {/* Category navigation */}
-      <nav className="hidden md:block bg-gray-100 py-2 px-4 md:px-8 border-t border-b">
+      <nav className="hidden md:block bg-muted py-2 px-4 md:px-8 border-t border-b border-border">
         <div className="container mx-auto flex justify-center items-center">
           <div className="flex items-center gap-6 overflow-x-auto">
             {categories.map((category) => (
-              <Link key={category.name} href={category.href} className="text-gray-700 hover:text-blue-600 whitespace-nowrap transition-colors duration-300 pb-1 border-b-2 border-transparent hover:border-blue-600">
+              <Link key={category.name} href={category.href} className="text-muted-foreground hover:text-primary whitespace-nowrap transition-colors duration-300 pb-1 border-b-2 border-transparent hover:border-primary">
                   {category.name}
               </Link>
             ))}

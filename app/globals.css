@@ -4,26 +4,26 @@
 
 /* Enhanced Design System with Better Visibility */
 :root {
-  /* Light Theme - Enhanced for Better Visibility */
-  --background: 0 0% 100%;
-  --foreground: 222.2 84% 4.9%;
+  /* Light Theme — Dark Blue + Sky Blue + Yellow palette */
+  --background: 0 0% 100%; /* white */
+  --foreground: 222.2 84% 4.9%; /* near-black */
   --card: 0 0% 100%;
   --card-foreground: 222.2 84% 4.9%;
   --popover: 0 0% 100%;
   --popover-foreground: 222.2 84% 4.9%;
-  --primary: 221.2 83.2% 53.3%;
-  --primary-foreground: 210 40% 98%;
-  --secondary: 210 40% 96%;
-  --secondary-foreground: 222.2 84% 4.9%;
+  --primary: 224 76% 39%; /* dark blue */
+  --primary-foreground: 210 40% 98%; /* white */
+  --secondary: 199 94% 50%; /* sky blue */
+  --secondary-foreground: 222.2 84% 4.9%; /* dark text */
   --muted: 210 40% 96%;
   --muted-foreground: 215.4 16.3% 46.9%;
-  --accent: 210 40% 96%;
+  --accent: 47 95% 58%; /* yellow */
   --accent-foreground: 222.2 84% 4.9%;
   --destructive: 0 84.2% 60.2%;
   --destructive-foreground: 210 40% 98%;
   --border: 214.3 31.8% 91.4%;
   --input: 214.3 31.8% 91.4%;
-  --ring: 221.2 83.2% 53.3%;
+  --ring: 224 76% 39%; /* match primary */
   --radius: 0.75rem;
   
   /* Chart Colors - More Vibrant */
@@ -39,30 +39,30 @@
   --sidebar-muted: 210 40% 96%;
   --sidebar-muted-foreground: 215.4 16.3% 46.9%;
   --sidebar-border: 214.3 31.8% 91.4%;
-  --sidebar-ring: 221.2 83.2% 53.3%;
+  --sidebar-ring: 224 76% 39%;
 }
 
 .dark {
-  /* Dark Theme - Enhanced for Better Contrast */
-  --background: 222.2 84% 4.9%;
-  --foreground: 210 40% 98%;
-  --card: 222.2 84% 4.9%;
+  /* Dark Theme — Dark Blue base */
+  --background: 222 50% 7%; /* deep navy */
+  --foreground: 210 40% 98%; /* white */
+  --card: 222 45% 9%;
   --card-foreground: 210 40% 98%;
-  --popover: 222.2 84% 4.9%;
+  --popover: 222 45% 9%;
   --popover-foreground: 210 40% 98%;
-  --primary: 217.2 91.2% 59.8%;
-  --primary-foreground: 222.2 84% 4.9%;
-  --secondary: 217.2 32.6% 17.5%;
-  --secondary-foreground: 210 40% 98%;
-  --muted: 217.2 32.6% 17.5%;
+  --primary: 221.2 83.2% 53.3%; /* vivid blue for actions */
+  --primary-foreground: 210 40% 98%; /* white text on blue */
+  --secondary: 199 94% 60%; /* sky blue */
+  --secondary-foreground: 222.2 84% 4.9%; /* dark text */
+  --muted: 220 30% 18%;
   --muted-foreground: 215 20.2% 65.1%;
-  --accent: 217.2 32.6% 17.5%;
-  --accent-foreground: 210 40% 98%;
+  --accent: 47 95% 58%; /* yellow */
+  --accent-foreground: 222.2 84% 4.9%;
   --destructive: 0 62.8% 30.6%;
   --destructive-foreground: 210 40% 98%;
-  --border: 217.2 32.6% 17.5%;
-  --input: 217.2 32.6% 17.5%;
-  --ring: 224.3 76.3% 94.1%;
+  --border: 220 30% 15%;
+  --input: 220 30% 15%;
+  --ring: 221.2 83.2% 53.3%;
   
   /* Chart Colors - Dark Theme */
   --chart-1: 220 70% 50%;
@@ -72,12 +72,12 @@
   --chart-5: 340 75% 55%;
   
   /* Sidebar Variables - Dark */
-  --sidebar-background: 222.2 84% 4.9%;
+  --sidebar-background: 222 50% 7%;
   --sidebar-foreground: 210 40% 98%;
-  --sidebar-muted: 217.2 32.6% 17.5%;
+  --sidebar-muted: 220 30% 18%;
   --sidebar-muted-foreground: 215 20.2% 65.1%;
-  --sidebar-border: 217.2 32.6% 17.5%;
-  --sidebar-ring: 224.3 76.3% 94.1%;
+  --sidebar-border: 220 30% 15%;
+  --sidebar-ring: 221.2 83.2% 53.3%;
 }
 
 /* Enhanced Base Styles for Better Text Visibility */
