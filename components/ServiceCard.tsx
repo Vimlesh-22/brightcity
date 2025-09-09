@@ -31,7 +31,7 @@ export default function ServiceCard({ service }: { service: ServiceCardProps }) 
 
   return (
     <Card 
-      className="group hover:shadow-xl transition-all duration-300 cursor-pointer border border-gray-200 overflow-hidden transform hover:scale-105"
+      className="group hover:shadow-xl transition-all duration-300 cursor-pointer border border-border overflow-hidden transform hover:scale-105 bg-card"
       onClick={() => router.push(`/services/${service.id}`)}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
@@ -63,7 +63,7 @@ export default function ServiceCard({ service }: { service: ServiceCardProps }) 
           </div>
           
           {/* Rating */}
-          <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-sm rounded-full px-2 py-1 flex items-center gap-1">
+          <div className="absolute top-3 right-3 bg-card/90 backdrop-blur-sm rounded-full px-2 py-1 flex items-center gap-1 border border-border">
             <Star className="w-3 h-3 fill-yellow-400 text-yellow-400" />
             <span className="text-xs font-bold">{service.rating}</span>
           </div>
@@ -80,30 +80,30 @@ export default function ServiceCard({ service }: { service: ServiceCardProps }) 
         <div className="p-3 space-y-2">
           {/* Title */}
           <div>
-            <h3 className="font-bold text-gray-900 line-clamp-2 group-hover:text-blue-600 transition-colors duration-300 text-lg">
+            <h3 className="font-bold text-foreground line-clamp-2 group-hover:text-primary transition-colors duration-300 text-lg">
               {service.title}
             </h3>
           </div>
 
           {/* Description */}
-          <p className="text-sm text-gray-600 line-clamp-2 leading-relaxed">
+          <p className="text-sm text-muted-foreground line-clamp-2 leading-relaxed">
             {service.description}
           </p>
 
           {/* Info Row */}
-          <div className="flex items-center justify-between text-xs text-gray-500">
-            <div className="flex items-center gap-1 bg-blue-50 px-2 py-1 rounded-full">
-              <Clock className="w-3 h-3 text-blue-600" />
-              <span className="text-blue-700 font-medium">{service.duration}</span>
+          <div className="flex items-center justify-between text-xs text-muted-foreground">
+            <div className="flex items-center gap-1 bg-muted px-2 py-1 rounded-full">
+              <Clock className="w-3 h-3 text-primary" />
+              <span className="text-foreground font-medium">{service.duration}</span>
             </div>
-            <div className="flex items-center gap-1 bg-green-50 px-2 py-1 rounded-full">
-              <MapPin className="w-3 h-3 text-green-600" />
-              <span className="text-green-700 font-medium">{service.location}</span>
+            <div className="flex items-center gap-1 bg-muted px-2 py-1 rounded-full">
+              <MapPin className="w-3 h-3 text-emerald-600" />
+              <span className="text-foreground font-medium">{service.location}</span>
             </div>
           </div>
 
           {/* Reviews */}
-          <div className="flex items-center gap-2 text-xs text-gray-500 bg-gray-50 px-2 py-1 rounded-lg">
+          <div className="flex items-center gap-2 text-xs text-muted-foreground bg-muted px-2 py-1 rounded-lg">
             <div className="flex items-center gap-1">
               <Star className="w-3 h-3 fill-yellow-400 text-yellow-400" />
               <span className="font-semibold">{service.rating}★</span>
@@ -112,17 +112,17 @@ export default function ServiceCard({ service }: { service: ServiceCardProps }) 
           </div>
 
           {/* Price Section */}
-          <div className="flex items-center justify-between pt-2 border-t border-gray-100">
+          <div className="flex items-center justify-between pt-2 border-t border-border">
             <div className="flex items-center gap-2">
-              <span className="text-xl font-bold text-gray-900">{service.price}</span>
+              <span className="text-xl font-bold text-foreground">{service.price}</span>
               {service.originalPrice && (
-                <span className="text-sm text-gray-500 line-through">{service.originalPrice}</span>
+                <span className="text-sm text-muted-foreground line-through">{service.originalPrice}</span>
               )}
             </div>
             
             <Button 
               size="sm"
-              className="bg-blue-600 hover:bg-blue-700 text-white transition-all duration-300 hover:scale-105"
+              className="btn-primary"
             >
               Book Now
               <ArrowRight className="w-3 h-3 ml-1" />
