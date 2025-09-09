@@ -42,6 +42,12 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // Theme-specific colors
+        'theme-dark-blue': 'hsl(220 100% 25%)',
+        'theme-sky-blue': 'hsl(195 100% 70%)',
+        'theme-yellow': 'hsl(45 100% 50%)',
+        'theme-white': 'hsl(0 0% 100%)',
+        'theme-black': 'hsl(0 0% 0%)',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
