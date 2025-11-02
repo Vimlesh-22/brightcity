@@ -28,7 +28,7 @@ export default function CategorySection({ title, categories }: { title: string, 
           <h2 className="text-4xl font-bold mb-4 text-gray-900 animate-fade-in-up">
             {title}
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full animate-pulse"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-black to-gray-700 mx-auto rounded-full animate-pulse"></div>
         </div>
         
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2 md:gap-4">
@@ -43,7 +43,7 @@ export default function CategorySection({ title, categories }: { title: string, 
             >
               <CardContent className="p-2 md:p-4 text-center space-y-2 md:space-y-4 relative">
                 {/* Background Glow Effect */}
-                <div className={`absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-lg transition-opacity duration-500 ${hoveredCard === category.id ? 'opacity-100' : 'opacity-0'}`}></div>
+                <div className={`absolute inset-0 bg-gradient-to-br from-black/10 to-gray-800/10 rounded-lg transition-opacity duration-500 ${hoveredCard === category.id ? 'opacity-100' : 'opacity-0'}`}></div>
                 
                 {/* Image Container */}
                 <div className="relative w-full aspect-square rounded-xl overflow-hidden bg-gray-100 group-hover:scale-110 transition-transform duration-500">
@@ -65,7 +65,7 @@ export default function CategorySection({ title, categories }: { title: string, 
                 
                 {/* Content */}
                 <div className="space-y-3 relative z-10">
-                  <h3 className="font-semibold text-gray-800 text-xs md:text-sm line-clamp-2 group-hover:text-blue-600 transition-colors duration-300">
+                  <h3 className="font-semibold text-gray-800 text-xs md:text-sm line-clamp-2 group-hover:text-black transition-colors duration-300">
                     {category.name}
                   </h3>
                   
@@ -96,14 +96,14 @@ export default function CategorySection({ title, categories }: { title: string, 
                 <Button 
                   variant="ghost" 
                   size="sm"
-                  className="w-full text-blue-600 hover:text-blue-700 hover:bg-blue-50 transition-all duration-300 group-hover:scale-105"
+                  className="w-full text-black hover:text-gray-800 hover:bg-gray-100 transition-all duration-300 group-hover:scale-105"
                 >
                   <ArrowRight className="w-3 h-3 mr-1 group-hover:translate-x-1 transition-transform duration-300" />
                   Explore
                 </Button>
                 
                 {/* Hover Border Effect */}
-                <div className="absolute inset-0 border-2 border-transparent group-hover:border-blue-500 rounded-lg transition-all duration-500 opacity-0 group-hover:opacity-100"></div>
+                <div className="absolute inset-0 border-2 border-transparent group-hover:border-black rounded-lg transition-all duration-500 opacity-0 group-hover:opacity-100"></div>
               </CardContent>
             </Card>
           ))}

@@ -11,8 +11,8 @@
   --card-foreground: 222.2 84% 4.9%;
   --popover: 0 0% 100%;
   --popover-foreground: 222.2 84% 4.9%;
-  --primary: 221.2 83.2% 53.3%;
-  --primary-foreground: 210 40% 98%;
+  --primary: 0 0% 0%;
+  --primary-foreground: 0 0% 100%;
   --secondary: 210 40% 96%;
   --secondary-foreground: 222.2 84% 4.9%;
   --muted: 210 40% 96%;
@@ -23,7 +23,7 @@
   --destructive-foreground: 210 40% 98%;
   --border: 214.3 31.8% 91.4%;
   --input: 214.3 31.8% 91.4%;
-  --ring: 221.2 83.2% 53.3%;
+  --ring: 0 0% 0%;
   --radius: 0.75rem;
   
   /* Chart Colors - More Vibrant */
@@ -39,7 +39,7 @@
   --sidebar-muted: 210 40% 96%;
   --sidebar-muted-foreground: 215.4 16.3% 46.9%;
   --sidebar-border: 214.3 31.8% 91.4%;
-  --sidebar-ring: 221.2 83.2% 53.3%;
+  --sidebar-ring: 0 0% 0%;
 }
 
 .dark {
@@ -203,11 +203,11 @@
   
   /* Brand utilities with better contrast */
   .brand-bg {
-    @apply bg-gradient-to-br from-blue-500 to-purple-600;
+    @apply bg-gradient-to-br from-black to-gray-800;
   }
   
   .brand-text {
-    @apply bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-black to-gray-700 bg-clip-text text-transparent;
   }
   
   .brand-accent {
@@ -353,10 +353,10 @@
 
 @keyframes glow {
   0%, 100% {
-    box-shadow: 0 0 5px rgba(59, 130, 246, 0.5);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   }
   50% {
-    box-shadow: 0 0 20px rgba(59, 130, 246, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
   }
 }
 
@@ -376,8 +376,8 @@
     transform: translateX(0.25rem);
   }
   
-  .group:hover .group-hover\:bg-blue-600 {
-    background-color: hsl(221.2 83.2% 53.3%);
+  .group:hover .group-hover\:bg-black {
+    background-color: hsl(0 0% 0%);
   }
   
   /* Enhanced card styles */
@@ -463,11 +463,11 @@ html {
 /* Enhanced Color Utilities */
 @layer utilities {
   .text-gradient {
-    @apply bg-gradient-to-r from-blue-600 via-purple-600 to-emerald-600 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-black via-gray-700 to-gray-900 bg-clip-text text-transparent;
   }
   
   .bg-gradient-primary {
-    @apply bg-gradient-to-r from-blue-500 to-purple-600;
+    @apply bg-gradient-to-r from-black to-gray-800;
   }
   
   .bg-gradient-secondary {

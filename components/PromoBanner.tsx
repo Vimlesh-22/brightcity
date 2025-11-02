@@ -73,7 +73,7 @@ export default function PromoBanner({ promo }: { promo: PromoBannerProps }) {
                 <span className="font-semibold">4.9★ Rating</span>
               </div>
               <div className="flex items-center gap-2 bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
-                <Sparkles className="w-5 h-5 text-blue-600" />
+                <Sparkles className="w-5 h-5 text-black" />
                 <span className="font-semibold">Verified</span>
               </div>
             </div>
@@ -81,7 +81,7 @@ export default function PromoBanner({ promo }: { promo: PromoBannerProps }) {
             <Button 
               onClick={() => router.push(promo.buttonLink)}
               size="lg"
-              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-10 py-4 text-xl font-bold shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 animate-fade-in-up delay-500"
+              className="bg-gradient-to-r from-black to-gray-800 hover:from-gray-900 hover:to-gray-700 text-white px-10 py-4 text-xl font-bold shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 animate-fade-in-up delay-500"
             >
               {promo.buttonText}
               <ArrowRight className="w-6 h-6 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
@@ -111,15 +111,15 @@ export default function PromoBanner({ promo }: { promo: PromoBannerProps }) {
               
               <div className="absolute bottom-6 left-6 bg-white/90 backdrop-blur-sm rounded-2xl p-4 shadow-xl">
                 <div className="text-center">
-                  <div className="text-lg font-bold text-blue-600">₹2,000</div>
+                  <div className="text-lg font-bold text-black">₹2,000</div>
                   <div className="text-xs text-gray-600">SAVE</div>
                 </div>
               </div>
             </div>
             
             {/* Decorative Elements */}
-            <div className="absolute -top-4 -right-4 w-20 h-20 bg-orange-300/30 rounded-full animate-pulse"></div>
-            <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-blue-300/30 rounded-full animate-pulse delay-500"></div>
+            <div className="absolute -top-4 -right-4 w-20 h-20 bg-gray-300/30 rounded-full animate-pulse"></div>
+            <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-gray-400/30 rounded-full animate-pulse delay-500"></div>
           </div>
         </div>
       </div>

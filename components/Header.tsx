@@ -19,17 +19,17 @@ const Header = () => {
   return (
     <header className="bg-white shadow-md">
       {/* Top bar */}
-      <div className="bg-blue-600 text-white text-sm py-2 px-4 md:px-8">
+      <div className="bg-black text-white text-sm py-2 px-4 md:px-8">
         <div className="container mx-auto flex justify-between items-center">
           <div className="hidden md:flex items-center gap-4">
-            <span className="cursor-pointer hover:text-blue-200 transition-colors duration-300 hover:scale-105">Track Order</span>
-            <span className="cursor-pointer hover:text-blue-200 transition-colors duration-300 hover:scale-105">Customer Support</span>
-            <span className="cursor-pointer hover:text-blue-200 transition-colors duration-300 hover:scale-105">Professional Login</span>
+            <span className="cursor-pointer hover:text-gray-300 transition-colors duration-300 hover:scale-105">Track Order</span>
+            <span className="cursor-pointer hover:text-gray-300 transition-colors duration-300 hover:scale-105">Customer Support</span>
+            <span className="cursor-pointer hover:text-gray-300 transition-colors duration-300 hover:scale-105">Professional Login</span>
           </div>
           <div className="flex items-center gap-4">
-            <Link href="/login" className="hover:text-blue-200 transition-colors duration-300 hover:scale-105">Login</Link>
+            <Link href="/login" className="hover:text-gray-300 transition-colors duration-300 hover:scale-105">Login</Link>
             <span className="text-gray-400">|</span>
-            <Link href="/register" className="hover:text-blue-200 transition-colors duration-300 hover:scale-105">Register</Link>
+            <Link href="/register" className="hover:text-gray-300 transition-colors duration-300 hover:scale-105">Register</Link>
           </div>
         </div>
       </div>
@@ -38,7 +38,7 @@ const Header = () => {
       <div className="py-4 px-4 md:px-8">
         <div className="container mx-auto flex justify-between items-center">
           <div className="flex items-center gap-8">
-            <Link href="/" className="text-3xl font-bold text-blue-600">
+            <Link href="/" className="text-3xl font-bold text-black">
               BrightCity
             </Link>
           </div>
@@ -49,13 +49,13 @@ const Header = () => {
               placeholder="Search for services..."
               className="w-full px-4 py-2 focus:outline-none"
             />
-            <button className="bg-blue-600 text-white p-2 hover:bg-blue-700 transition-colors">
+            <button className="bg-black text-white p-2 hover:bg-gray-800 transition-colors">
               <Search size={20} />
             </button>
           </div>
 
           <div className="flex items-center gap-4">
-            <div className="hidden md:flex items-center gap-2 cursor-pointer hover:text-blue-600 transition-colors">
+            <div className="hidden md:flex items-center gap-2 cursor-pointer hover:text-black transition-colors">
               <ShoppingCart size={24} />
               <span className="font-medium">Cart</span>
             </div>
@@ -78,25 +78,25 @@ const Header = () => {
                 placeholder="Search for services..."
                 className="w-full px-4 py-2 focus:outline-none"
               />
-              <button className="bg-blue-600 text-white p-2 hover:bg-blue-700 transition-colors">
+              <button className="bg-black text-white p-2 hover:bg-gray-800 transition-colors">
                 <Search size={20} />
               </button>
             </div>
-            <div className="flex items-center gap-2 cursor-pointer hover:text-blue-600 transition-colors">
+            <div className="flex items-center gap-2 cursor-pointer hover:text-black transition-colors">
               <ShoppingCart size={24} />
               <span className="font-medium">Cart</span>
             </div>
             <nav className="flex flex-col gap-2">
               {categories.map((category) => (
-                <Link key={category.name} href={category.href} className="text-gray-700 hover:text-blue-600 py-2 border-b">
+                <Link key={category.name} href={category.href} className="text-gray-700 hover:text-black py-2 border-b">
                   {category.name}
                 </Link>
               ))}
             </nav>
             <div className="border-t pt-4 mt-2 flex flex-col gap-2">
-                <span className="cursor-pointer hover:text-blue-600">Track Order</span>
-                <span className="cursor-pointer hover:text-blue-600">Customer Support</span>
-                <span className="cursor-pointer hover:text-blue-600">Professional Login</span>
+                <span className="cursor-pointer hover:text-black">Track Order</span>
+                <span className="cursor-pointer hover:text-black">Customer Support</span>
+                <span className="cursor-pointer hover:text-black">Professional Login</span>
             </div>
           </div>
         </div>
@@ -107,7 +107,7 @@ const Header = () => {
         <div className="container mx-auto flex justify-center items-center">
           <div className="flex items-center gap-6 overflow-x-auto">
             {categories.map((category) => (
-              <Link key={category.name} href={category.href} className="text-gray-700 hover:text-blue-600 whitespace-nowrap transition-colors duration-300 pb-1 border-b-2 border-transparent hover:border-blue-600">
+              <Link key={category.name} href={category.href} className="text-gray-700 hover:text-black whitespace-nowrap transition-colors duration-300 pb-1 border-b-2 border-transparent hover:border-black">
                   {category.name}
               </Link>
             ))}
