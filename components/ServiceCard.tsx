@@ -80,7 +80,7 @@ export default function ServiceCard({ service }: { service: ServiceCardProps }) 
         <div className="p-3 space-y-2">
           {/* Title */}
           <div>
-            <h3 className="font-bold text-gray-900 line-clamp-2 group-hover:text-black transition-colors duration-300 text-lg">
+            <h3 className="font-bold text-gray-900 line-clamp-2 group-hover:text-gray-700 transition-colors duration-300 text-lg">
               {service.title}
             </h3>
           </div>

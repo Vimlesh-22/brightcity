@@ -118,8 +118,8 @@ export default function PromoBanner({ promo }: { promo: PromoBannerProps }) {
             </div>
             
             {/* Decorative Elements */}
-            <div className="absolute -top-4 -right-4 w-20 h-20 bg-gray-300 rounded-full animate-pulse"></div>
-            <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-gray-400 rounded-full animate-pulse delay-500"></div>
+            <div className="absolute -top-4 -right-4 w-20 h-20 bg-gray-300/30 rounded-full animate-pulse"></div>
+            <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-gray-400/30 rounded-full animate-pulse delay-500"></div>
           </div>
         </div>
       </div>
