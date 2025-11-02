@@ -70,7 +70,7 @@ export default function ServiceCard({ service }: { service: ServiceCardProps }) 
 
           {/* Category Badge */}
           <div className="absolute bottom-3 left-3">
-            <Badge className="bg-blue-600/90 backdrop-blur-sm text-white text-xs">
+            <Badge className="bg-black backdrop-blur-sm text-white text-xs">
               {service.category}
             </Badge>
           </div>
@@ -80,7 +80,7 @@ export default function ServiceCard({ service }: { service: ServiceCardProps }) 
         <div className="p-3 space-y-2">
           {/* Title */}
           <div>
-            <h3 className="font-bold text-gray-900 line-clamp-2 group-hover:text-blue-600 transition-colors duration-300 text-lg">
+            <h3 className="font-bold text-gray-900 line-clamp-2 group-hover:text-black transition-colors duration-300 text-lg">
               {service.title}
             </h3>
           </div>
@@ -92,9 +92,9 @@ export default function ServiceCard({ service }: { service: ServiceCardProps }) 
 
           {/* Info Row */}
           <div className="flex items-center justify-between text-xs text-gray-500">
-            <div className="flex items-center gap-1 bg-blue-50 px-2 py-1 rounded-full">
-              <Clock className="w-3 h-3 text-blue-600" />
-              <span className="text-blue-700 font-medium">{service.duration}</span>
+            <div className="flex items-center gap-1 bg-gray-100 px-2 py-1 rounded-full">
+              <Clock className="w-3 h-3 text-black" />
+              <span className="text-gray-900 font-medium">{service.duration}</span>
             </div>
             <div className="flex items-center gap-1 bg-green-50 px-2 py-1 rounded-full">
               <MapPin className="w-3 h-3 text-green-600" />
@@ -122,7 +122,7 @@ export default function ServiceCard({ service }: { service: ServiceCardProps }) 
             
             <Button 
               size="sm"
-              className="bg-blue-600 hover:bg-blue-700 text-white transition-all duration-300 hover:scale-105"
+              className="bg-black hover:bg-gray-800 text-white transition-all duration-300 hover:scale-105"
             >
               Book Now
               <ArrowRight className="w-3 h-3 ml-1" />
